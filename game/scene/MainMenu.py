@@ -27,8 +27,9 @@ class MainMenu(Scene):
         self.shadow = p.Surface((232, 224))
         self.shadow.fill((0, 0, 0))
         self.shadow.set_alpha(120)
+        Audio.play_track("assets/sounds/main_menu.wav")
 
-        # Sounds.sound_ex("assets/sounds/main_menu.mp3")
+    
 
     def update(self):
         if self.play_button.update():

@@ -28,6 +28,8 @@ class Level(Scene):
 
     def set_level(self, level):
         self.clear()
+        Audio.play_track("assets/sounds/level.wav")
+
 
         if level == '1':
             self.level = Level1()
@@ -46,6 +48,7 @@ class Level(Scene):
         TileMap.clear()
         Collision.clear()
         ObjectCollection.clear()
+        Audio.stop_track()
 
     def early_update(self):
         ObjectCollection.early_update()
